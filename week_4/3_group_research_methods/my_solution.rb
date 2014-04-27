@@ -4,7 +4,7 @@ i_want_pets = ["I", "want", 3, "pets", "but", "I", "only", "have", 2]
 my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, 
             "Annabelle" => 0, "Ditto" => 3}
 
-# Person 1's solution
+# Person 1's solution ()
 def my_array_finding_method(source, thing_to_find)
   # Your code here!
 end
@@ -18,28 +18,28 @@ end
 #
 #
 
-# Person 2
+# Person 2 (Hing Huynh)
 def my_array_modification_method(source, thing_to_modify)
-  # Your code here!
+  # go through array if element is a number add thing_to_modify 
+  source.map { |x| x.is_a?(Integer) ? x + thing_to_modify : x }
 end
 
 def my_hash_modification_method(source, thing_to_modify)
-  # Your code here!
+  source.each { |key,value| source[key] += thing_to_modify } 
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
+# I used .map, which creates a new array containing the values returned by the block.
+# I used .each, which calls the given block once for each element in self, passing that element as a parameter.
 #
-#
-
 
 # Person 3
 def my_array_sorting_method(source)
-  # Your code here!
+  source.sort_by { |a| a.to_s }
 end
 
 def my_hash_sorting_method(source)
-  # Your code here!
+  source.sort_by { |name, age| age }
 end
 
 # Identify and describe the ruby method you implemented. 
@@ -50,11 +50,11 @@ end
 
 # Person 4
 def my_array_deletion_method(source, thing_to_delete)
-  #Your code here!
+  source.each { |word| source.delete(word) if word.include? thing_to_delete }
 end
 
 def my_hash_deletion_method(source, thing_to_delete)
-  #Your code here!
+  source.delete(thing_to_delete)
 end
 
 # Identify and describe the ruby method you implemented. 
@@ -79,7 +79,11 @@ p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie
 
 # Reflect!
 # 
-# 
-# 
-# 
-# 
+# This was the hardest exercise this week for me, but it got me to really understand how to properly 
+# manipulate hashes and arrays. I struggled trying to figure out how to write a conditional inside
+# a loop. In the end, I ended up using a ternary operation to get it done. The other problem I had
+# was figuring out why when i trying to manipulate the hash's value, I couldn't get the value to change
+# and if I did, the values that I didn't manipulate turned to nil. Now that I know that the key and values
+# are linked in the sense that if I want to change value, I need to manipulate key's value using hash[key].
+# This exercise really got my brain juices flowing, but it was frustrating after trying so many possiblities,
+# and not really understand why my solution wasn't working. 
