@@ -11,7 +11,7 @@ end
 
 def my_hash_finding_method(source, thing_to_find)
   things = source.select{ |k,v| v == thing_to_find }
-  things.flatten.select { |i| i != thing_to_find } 
+  things.keys 
 end
 
 # Identify and describe the ruby method you implemented. 
@@ -22,7 +22,7 @@ end
 # Person 2 (Hing Huynh)
 def my_array_modification_method(source, thing_to_modify)
   # go through array if element is a number add thing_to_modify 
-  source.map { |x| x.is_a?(Integer) ? x + thing_to_modify : x }
+  source.map! { |x| x.is_a?(Integer) ? x + thing_to_modify : x }
 end
 
 def my_hash_modification_method(source, thing_to_modify)
