@@ -6,11 +6,12 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
 
 # Person 1's solution ()
 def my_array_finding_method(source, thing_to_find)
-  # Your code here!
+  source.select{ |word| word.to_s.include? thing_to_find }
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  # Your code here!
+  things = source.select{ |k,v| v == thing_to_find }
+  things.flatten.select { |i| i != thing_to_find } 
 end
 
 # Identify and describe the ruby method you implemented. 
