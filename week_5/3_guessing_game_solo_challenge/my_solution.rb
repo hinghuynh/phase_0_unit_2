@@ -14,14 +14,25 @@
 
 class GuessingGame
   def initialize(answer)
-    # Your initialization code goes here
+  	@answer = answer
   end
-  
-  # Make sure you define the other required methods, too
+
+  def guess(num)
+  	@num = num
+  	if @num == @answer
+  		return :correct
+  	elsif @num > @answer
+  		return :high
+  	else
+  		return :low
+  	end
+  end
+
+  def solved?
+  	return false unless @num == @answer
+  		return true
+  end
 end
-
-
-
 
 # 4. Refactored Solution
 

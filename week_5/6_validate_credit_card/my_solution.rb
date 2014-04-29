@@ -16,9 +16,25 @@
 # of exactly 16 digits
 class CreditCard
 
+	def initialize(number)
+		raise(ArgumentError, 'credit card # is not 16 digits') unless number.to_s.length == 16
+		@number = number
+	end
+
+	def check_card
+		num = @number.to_s.split('')	
+		num	= num.map { |x| x.to_i }
+		i = 2
+		while (@number.to_s.length - i) >= 0
+			num[@number.to_s.length - i] *= 2
+			i +=2
+		end
+		num	= num.map { |x| x.to_s }.join.split('')
+		total = 0
+		num.each { |x| total += (x.to_i) }
+		return total % 10 == 0
+	end
 end
-
-
 
 # 4. Refactored Solution
 
@@ -28,7 +44,6 @@ end
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
-
 
 
 
