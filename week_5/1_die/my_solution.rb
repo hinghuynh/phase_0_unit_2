@@ -14,17 +14,20 @@
 
 class Die
   def initialize(sides)
-    # code goes here
+    raise(ArgumentError, 'Arugment is less than 1') unless sides > 0
+    @sides = sides
   end
   
   def sides
-    # code goes here
+    @sides 
   end
-  
+    
   def roll
-    # code goes here
+    1 + rand(@sides) 
   end
+
 end
+
 
 
 

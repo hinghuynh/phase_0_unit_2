@@ -1,6 +1,6 @@
 # U2.W5: Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself, with: Lienha Carleton ].
 
 # EXPLANATION OF require_relative
 #
@@ -23,7 +23,21 @@ class VirusPredictor
   end
 
   private  #what is this?  what happens if it were cut and pasted above the virus_effects method
-
+  # def predicted_deaths(population_density, population, state)
+  # density = 50
+  # multiple = 0.1
+  #   until @population_density < density
+  #     density += 50
+  #     if @population_density < density
+  #     number_of_deaths = (@population * multiple).floor
+  #     else 
+  #     multiple += 0.1
+  #     end
+  #   end
+  #  number_of_deaths = (@population * 0.05).floor
+  #  print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+  # end
+  
   def predicted_deaths(population_density, population, state)
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
