@@ -12,7 +12,6 @@ def bakery_num(num_of_people, fav_food)
     raise ArgumentError.new("You can't make that food")
   end
   
-  
   my_list[fav_food][1] = num_of_people / my_list[fav_food][0]
   num_of_people = num_of_people % my_list[fav_food][0]
   return "You need to make #{my_list[fav_food][1]} #{fav_food}(s)." if num_of_people == 0
@@ -27,9 +26,7 @@ def bakery_num(num_of_people, fav_food)
     my_list["cookie"][1] = num_of_people
     num_of_people = 0
   end
-  
   return "You need to make #{my_list["pie"][1]} pie(s), #{my_list["cake"][1]} cake(s), and #{my_list["cookie"][1]} cookie(s)."
-
 end
 
 #DRIVER CODE-- DO NOT MODIFY ANYTHING BELOW THIS LINE (except in the section at the bottom)
