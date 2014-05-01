@@ -1,10 +1,11 @@
 # U2.W5: Virus Predictor
 
-# I worked on this challenge [by myself, with: Lienha Carleton ].
+# I worked on this challenge [by myself, with: ].
 
 # EXPLANATION OF require_relative
-#
-#
+# This file can pull data from state_data
+
+
 require_relative 'state_data'
 
 class VirusPredictor
@@ -18,62 +19,31 @@ class VirusPredictor
   end
 
   def virus_effects  #HINT: What is the SCOPE of instance variables?
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+                     # We have access to the instance variables as long as we are using the class VirusPredictor.
+    predicted_deaths_and_speed_of_spread(@population_density, @population, @state)
   end
 
-  private  #what is this?  what happens if it were cut and pasted above the virus_effects method
-  # def predicted_deaths(population_density, population, state)
-  # density = 50
-  # multiple = 0.1
-  #   until @population_density < density
-  #     density += 50
-  #     if @population_density < density
-  #     number_of_deaths = (@population * multiple).floor
-  #     else 
-  #     multiple += 0.1
-  #     end
-  #   end
-  #  number_of_deaths = (@population * 0.05).floor
-  #  print "#{@state} will lose #{number_of_deaths} people in this outbreak"
-  # end
+  private  # what is this?  what happens if it were cut and pasted above the virus_effects method
+           # private makes variables only available to the method
+           # It it were cut and pasted above the virus_effects, it became available to the class.
   
-  def predicted_deaths(population_density, population, state)
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else 
-      number_of_deaths = (@population * 0.05).floor
+  def predicted_deaths_and_speed_of_spread(population_density, population, state)
+    
+    data = {"population density" => [200,150,100,50,0], 
+            "speed of spread" => [7.5,5,3,1.5,0.5], 
+            "multipler" => [0.4,0.3,0.2,0.1,0.05]}
+    i = 0
+    number_of_deaths = 0
+    until number_of_deaths != 0
+      if @population_density >= data["population density"][i]
+        number_of_deaths = (@population * data["multipler"][i]).floor
+        speed_of_spread = data["speed of spread"][i]
+      end
+      i += 1
     end
-
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
-
+        print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+        puts " and will spread across the state in #{speed_of_spread} months.\n\n"
   end
-
-  def speed_of_spread(population_density, state) #in months
-    speed = 0.0
-
-    if @population_density >= 200
-      speed += 0.5
-    elsif @population_density >= 150
-      speed += 1
-    elsif @population_density >= 100
-      speed += 1.5
-    elsif @population_density >= 50
-      speed += 2
-    else 
-      speed += 2.5
-    end
-
-    puts " and will spread across the state in #{speed} months.\n\n"
-
-  end
-
 end
 
 #=======================================================================

@@ -10,11 +10,57 @@
 
 # Initial Solution
 
+class Song
+	attr_accessor :song, :musician
+	def initialize(song, musician)
+		@song = song
+		@musician = musician
+	end
 
+	def play
+		puts "♫♪♫  Now playing: #{@musician} - #{@song} ♫♪♫"
+	end
 
+	def display
+		puts "#{@musician} - #{@song}"
+	end
+
+end
+
+class Playlist < Song
+	attr_accessor :songs
+	def initialize(*songs)
+		@songs = songs
+	end
+
+	def add(*songs)
+		songs.each { |song| @songs << song } 
+	end
+
+	def num_of_tracks
+		return @songs.count
+	end
+
+	def remove(song)
+		@songs.delete(song)
+	end
+
+	def includes?(song)
+		@songs.include?(song)
+	end
+
+	def play_all
+		@songs.each { |song| song.play }
+	end
+
+	def display
+		puts "Current Playlist"
+		puts "Artist:      Title:"
+		@songs.each { |song| song.display }
+	end
+end
 
 # Refactored Solution
-
 
 
 
@@ -37,7 +83,6 @@ my_playlist.remove(angels)
 p my_playlist.includes?(lying_from_you) == true
 my_playlist.play_all
 my_playlist.display
-
 
 
 
