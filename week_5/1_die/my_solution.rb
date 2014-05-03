@@ -53,3 +53,9 @@ end
 # zero_die = Die.new(0)
 
 # 5. Reflection 
+# This was a simple assigment. I think it's purpose was to get me to understand the basics of
+# classes and methods, and how to raise an argument arror. There wasn't much difficulty with
+# this exercise. However, I was having problems executing the rspec at first, only because
+# I had some driver code turned on that was conflicting the instance values in rpsec.  When
+# I turned off my driver tests, the rspec ran fine. I didn't really enjoy this exercise. There 
+# much to it, probably watching the driver tests work was the most fun. 
