@@ -58,3 +58,9 @@ end
 # p another_die.roll
 
 # 5. Reflection 
+# This exercise at least had a little more thought behind it to get it to work. 
+# This one was fairly easy as well. The hardest part was probably just translating my
+# psuedo code into code. There wasn't anything I was really having trouble with, once I
+# figured out what I wanted to do. I enjoyed creating the driver tests, I think it's 
+# fun to see your coding working and actually giving you the decided results. Creating 
+# pseudo code was probably the most tedious thing for this exercise.
