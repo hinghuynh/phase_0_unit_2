@@ -10,9 +10,18 @@
 
 # 3. Initial Solution
 class BoggleBoard
- 
-  #your code here
- 
+  def initialize(board)
+    @board = board
+  end
+  def create_word(board, *coords)
+      coords.map { |coord| board[coord.first][coord.last]}.join("")
+  end
+  def get_row(row)
+      boggle_board[row]
+  end
+  def get_col(col)
+      boggle_board.transpose[col]
+  end
 end
  
  
@@ -26,6 +35,7 @@ boggle_board = BoggleBoard.new(dice_grid)
 
 
 # 4. Refactored Solution
+
 
 
 
