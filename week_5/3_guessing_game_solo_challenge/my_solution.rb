@@ -60,15 +60,22 @@ class GuessingGame
 end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
-game = GuessingGame.new(10)
+# game = GuessingGame.new(10)
 
-game.solved?   # => false
+# game.solved?   # => false
 
-game.guess(5)  # => :low
-game.guess(20) # => :high
-game.solved?   # => false
+# game.guess(5)  # => :low
+# game.guess(20) # => :high
+# game.solved?   # => false
 
-game.guess(10) # => :correct
-game.solved?   # => true
+# game.guess(10) # => :correct
+# game.solved?   # => true
 
 # 5. Reflection 
+# This was a fairly easy assignment as well. The only tricky part was trying
+# to understand what the colons before the words correct, high and low meant.
+# Although I still don't have good understand of what symbols are, they were
+# easy to implment in terms getting the right output. I enjoyed the thought 
+# process behind creating a the method guess. Even if it was just a few simple
+# conditional statements.  I found the psuedo coding the most tedious task
+# of this exercise.
