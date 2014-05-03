@@ -7,12 +7,10 @@ boggle_board = [["b", "r", "a", "e"],
                 ["e", "c", "l", "r"],
                 ["t", "a", "k", "e"]]
 
-
 # Part 1: Access multiple elements of a nested array
 
 # Pseudocode
     #create a method creat_word that takes two arguments board and *coords and returns a word from joining coordinated letters.
-
 
 # Initial Solution
   def create_word(board, *coords)
@@ -21,7 +19,6 @@ boggle_board = [["b", "r", "a", "e"],
  
 # Refactored Solution
 # Nothing here.
-
 
 # DRIVER TESTS GO BELOW THIS LINE
 puts create_word(boggle_board, [2,1], [1,1], [1,2], [0,3])  #=> returns "code"  
