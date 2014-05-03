@@ -42,7 +42,7 @@ p bakery_num(3, "apples") # this will raise an ArgumentError
 
 #  Reflection 
 # This was the hardest assigment of the week, probably because I didn't look at the assigment in advance was 
-# really struggling to understand the code feeling the time constraint of a GPS. I really wanted to contribute
+# really struggling to understand the code while feeling the time constraint of a GPS. I really wanted to contribute
 # more, but the approach that my partner took or thought of were not what I would have ideally done. So I 
 # was trying to understand his approach and best accomodate him. I really liked the array in the key[value] of 
 # hash approach that my partner thought of. I liked it so much, that I actually implemented it again in the virus 
