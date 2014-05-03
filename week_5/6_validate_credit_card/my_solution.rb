@@ -69,7 +69,7 @@ goodcard.check_card == true
 
 # 5. Reflection 
 # I think I got lucky on this assigment. When I was helping others on this assignment, it only occured
-# to me after how , how clever of a solution I created. What seemed quite intuitive to me other people
+# to me after, how clever of a solution I created. What seemed quite intuitive to me other people
 # struggled on. I really enjoyed doing this assigment, because I was able to use my problem solving 
 # abilities to create a solution. The hardest part that people seemed to struggle with was splitting 
 # the numbers that now had 2 digits after been multipled back into single digits. I just reiterated 
