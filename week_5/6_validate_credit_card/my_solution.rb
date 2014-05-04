@@ -51,13 +51,12 @@ class CreditCard
 	def check_card
 		num = @number.to_s.chars.map { |x| x.to_i }
 		i = 2
-		while (@number.to_s.length - i) >= 0
-			num[@number.to_s.length - i] *= 2
+		while (num.length - i) >= 0
+			num[num.length - i] *= 2
 			i += 2
 		end
 		num	= num.join.to_s.chars.map { |x| x.to_i }
-		total = num.reduce(:+)
-		return total % 10 == 0
+		num.reduce(:+) % 10 == 0
 	end
 end
 
