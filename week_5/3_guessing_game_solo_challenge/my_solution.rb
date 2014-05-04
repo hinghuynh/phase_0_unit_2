@@ -55,21 +55,22 @@ class GuessingGame
   end
 
   def solved?
-  	@num == @answer
+  	return false unless @num == @answer
+      return true
   end
 end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 # game = GuessingGame.new(10)
 
-# game.solved?   # => false
+# p game.solved? == false
 
-# game.guess(5)  # => :low
-# game.guess(20) # => :high
-# game.solved?   # => false
+# p game.guess(5) == :low
+# p game.guess(20) == :high
+# p game.solved?   == false
 
-# game.guess(10) # => :correct
-# game.solved?   # => true
+# p game.guess(10) == :correct
+# p game.solved?  == true
 
 # 5. Reflection 
 # This was a fairly easy assignment as well. The only tricky part was trying
