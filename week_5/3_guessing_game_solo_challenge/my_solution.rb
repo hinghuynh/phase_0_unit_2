@@ -55,7 +55,7 @@ class GuessingGame
   end
 
   def solved?
-  	false unless @num == @answer
+  	return false unless @num == @answer
       true
   end
 end
