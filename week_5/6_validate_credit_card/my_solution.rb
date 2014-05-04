@@ -44,7 +44,7 @@
 # 4. Refactored Solution
 class CreditCard
 	def initialize(number)
-		raise(ArgumentError, 'credit card # is not 16 digits') unless number.to_s.length == 16
+		raise(ArgumentError, 'invald # of digits') unless number.to_s.length == 16
 		@number = number
 	end
 
@@ -61,10 +61,10 @@ class CreditCard
 end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
-badcard = CreditCard.new(2222222222222222)
-badcard.check_card == false
-goodcard = CreditCard.new(4408041234567893)
-goodcard.check_card == true
+# badcard = CreditCard.new(2222222222222222)
+# badcard.check_card == false
+# goodcard = CreditCard.new(4408041234567893)
+# goodcard.check_card == true
 
 # 5. Reflection 
 # I think I got lucky on this assigment. When I was helping others on this assignment, it only occured
