@@ -46,17 +46,17 @@ class GuessingGame
   def guess(num)
   	@num = num
   	if @num == @answer
-  		return :correct
+  		:correct
   	elsif @num > @answer
-  		return :high
+  		:high
   	else
-  		return :low
+  		:low
   	end
   end
 
   def solved?
-  	return false unless @num == @answer
-      return true
+  	false unless @num == @answer
+      true
   end
 end
 
