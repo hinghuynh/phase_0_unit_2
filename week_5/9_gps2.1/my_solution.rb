@@ -4,29 +4,22 @@
 
 # Our Refactored Solution
 
-def bakery_num(num_of_people, fav_food)
-  my_list = {"pie" => [8,0], "cake" => [6,0], "cookie" => [1,0]}
-  
-  has_fave = my_list.has_key? fav_food
-  if has_fave == false
-    raise ArgumentError.new("You can't make that food")
-  end
+def bakery_num(num_of_people, fav_food) 
+  my_list = {"pie" => [8,0], "cake" => [6,0], "cookie" => [1,0]} 
+  raise ArgumentError.new("You can't make that food") unless my_list.has_key?(fav_food)
   
   my_list[fav_food][1] = num_of_people / my_list[fav_food][0]
   num_of_people = num_of_people % my_list[fav_food][0]
-  return "You need to make #{my_list[fav_food][1]} #{fav_food}(s)." if num_of_people == 0
-  
-  if num_of_people / my_list["pie"][0] > 0
-    my_list["pie"][1] = num_of_people / my_list["pie"][0] 
-    num_of_people = num_of_people % my_list["pie"][0] 
-  elsif num_of_people / my_list["cake"][0] > 0
-    my_list["cake"][1]= num_of_people / my_list["cake"][0]
-    num_of_people = num_of_people % my_list["cake"][0]
+
+  if num_of_people == 0
+    "You need to make #{my_list[fav_food][1]} #{fav_food}(s)." 
   else
-    my_list["cookie"][1] = num_of_people
-    num_of_people = 0
+    my_list.select {|key, value| key != fav_food}.each { |key, value|
+                                                        value[1] = num_of_people / value[0]
+                                                        num_of_people = num_of_people % value[0]
+                                                      }
+    "You need to make #{my_list["pie"][1]} pie(s), #{my_list["cake"][1]} cake(s), and #{my_list["cookie"][1]} cookie(s)."
   end
-  return "You need to make #{my_list["pie"][1]} pie(s), #{my_list["cake"][1]} cake(s), and #{my_list["cookie"][1]} cookie(s)."
 end
 
 #DRIVER CODE-- DO NOT MODIFY ANYTHING BELOW THIS LINE (except in the section at the bottom)
