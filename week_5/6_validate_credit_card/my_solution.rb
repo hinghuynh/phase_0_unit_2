@@ -43,15 +43,15 @@
 
 # 4. Refactored Solution
 class CreditCard
-	def initialize(number)
-		raise(ArgumentError, 'invald # of digits') unless number.to_s.length == 16
-		@number = number.to_s.chars.map(&:to_i)
+	def initialize(num)
+		raise(ArgumentError, 'invald # of digits') unless num.to_s.length == 16
+		@num = num.to_s.chars.map(&:to_i)
 	end
 
 	def check_card
-		@number.each_index { |i| @number[i] *= 2 if i.even? }
-		@number	= @number.join.to_s.chars.map(&:to_i)
-		@number.reduce(:+) % 10 == 0
+		@num.each_index { |i| @num[i] *= 2 if i.even? }
+		@num = @num.join.to_s.chars.map(&:to_i)
+		@num.reduce(:+) % 10 == 0
 	end
 end
 
