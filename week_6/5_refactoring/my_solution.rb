@@ -5,7 +5,7 @@
 
 
 # Original Solution
-# 4. Refactored Solution
+
 class CreditCard
 	def initialize(num)
 		raise(ArgumentError, 'invald # of digits') unless num.to_s.length == 16
@@ -19,11 +19,8 @@ class CreditCard
 	end
 end
 
-
-
 # Refactored Solution
 
-# 4. Refactored Solution
 class CreditCard
 	def initialize(num)
 		raise(ArgumentError, 'invald # of digits') unless num.to_s.length == 16
