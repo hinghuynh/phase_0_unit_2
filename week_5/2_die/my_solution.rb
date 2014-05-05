@@ -43,7 +43,7 @@ class Die
   end
 
   def roll
-    @labels[rand(sides)]
+    @labels.sample
   end
 end
 

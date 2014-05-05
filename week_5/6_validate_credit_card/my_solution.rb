@@ -45,12 +45,12 @@
 class CreditCard
 	def initialize(number)
 		raise(ArgumentError, 'invald # of digits') unless number.to_s.length == 16
-		@number = number.to_s.chars.map { |x| x.to_i }
+		@number = number.to_s.chars.map(&:to_i)
 	end
 
 	def check_card
 		@number.each_index { |i| @number[i] *= 2 if i.even? }
-		@number	= @number.join.to_s.chars.map { |x| x.to_i }
+		@number	= @number.join.to_s.chars.map(&:to_i)
 		@number.reduce(:+) % 10 == 0
 	end
 end
