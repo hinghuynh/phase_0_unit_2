@@ -39,7 +39,7 @@ boggle_board = BoggleBoard.new(dice_grid)
  
 # 4. Refactored Solution
 
-
+# Couldn't think of anything to refactor for this exercise.
 
 
 
