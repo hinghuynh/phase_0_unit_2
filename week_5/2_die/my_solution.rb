@@ -8,10 +8,10 @@
 # Input: an array of letters
 # Output: a random letter after rolling the die
 # Steps:
-    # create a class Die
-    # create an initialize method that takes one argument which an array, if the array is empty raise the ArgumentError.
-    # create a method that returns the sides of the die
-    # create a method roll that returns a random side of the die.
+# create a class Die
+# create an initialize method that takes one argument which an array, if the array is empty raise the ArgumentError.
+# create a method that returns the sides of the die
+# create a method roll that returns a random side of the die.
 
 # 3. Initial Solution
 
@@ -52,15 +52,15 @@ end
 # new_die = Die.new(("A".."F").to_a)
 # another_die = Die.new(("G".."Z").to_a)
 # p new_die.sides == 6
-# p new_die.roll 
+# p new_die.roll
 # p another_die.roll
 # p another_die.sides == 20
 # p another_die.roll
 
-# 5. Reflection 
-# This exercise at least had a little more thought behind it to get it to work. 
+# 5. Reflection
+# This exercise at least had a little more thought behind it to get it to work.
 # This one was fairly easy as well. The hardest part was probably just translating my
 # psuedo code into code. There wasn't anything I was really having trouble with, once I
-# figured out what I wanted to do. I enjoyed creating the driver tests, I think it's 
-# fun to see your coding working and actually giving you the decided results. Creating 
+# figured out what I wanted to do. I enjoyed creating the driver tests, I think it's
+# fun to see your coding working and actually giving you the decided results. Creating
 # pseudo code was probably the most tedious thing for this exercise.

@@ -8,10 +8,10 @@
 # Input: Die#sides
 # Output: random sides
 # Steps:
-    # create a class Die
-    # create a method initialize that takes one argument sides, raise ArgumentError if sides is less than 1
-    # create a method sides that returns the instant variable @sides
-    # create a method roll that returns a random number from 1 through the number of sides
+# create a class Die
+# create a method initialize that takes one argument sides, raise ArgumentError if sides is less than 1
+# create a method sides that returns the instant variable @sides
+# create a method roll that returns a random number from 1 through the number of sides
 
 
 # 3. Initial Solution
@@ -21,13 +21,13 @@
 #     raise(ArgumentError, 'Sides is less than 1') unless sides > 0
 #     @sides = sides
 #   end
-  
+
 #   def sides
-#     @sides 
+#     @sides
 #   end
-    
+
 #   def roll
-#     1 + rand(@sides) 
+#     1 + rand(@sides)
 #   end
 # end
 
@@ -38,9 +38,9 @@ class Die
     raise(ArgumentError, 'Sides is less than 1') unless sides > 0
     @sides = sides
   end
-  
+
   def roll
-    1 + rand(@sides) 
+    1 + rand(@sides)
   end
 end
 
@@ -52,10 +52,10 @@ end
 # p six_die.sides < 7
 # zero_die = Die.new(0)
 
-# 5. Reflection 
+# 5. Reflection
 # This was a simple assigment. I think it's purpose was to get me to understand the basics of
 # classes and methods, and how to raise an argument arror. There wasn't much difficulty with
 # this exercise. However, I was having problems executing the rspec at first, only because
 # I had some driver code turned on that was conflicting the instance values in rpsec.  When
-# I turned off my driver tests, the rspec ran fine. I didn't really enjoy this exercise. There 
-# much to it, probably watching the driver tests work was the most fun. 
+# I turned off my driver tests, the rspec ran fine. I didn't really enjoy this exercise. There
+# much to it, probably watching the driver tests work was the most fun.

@@ -1,8 +1,8 @@
 # U2.W4: SOLO CHALLENGE Calculate the Median!
 
-# Complete each step below according to the challenge directions and 
+# Complete each step below according to the challenge directions and
 # include it in this file. Also make sure everything that isn't code
-# is commented in the file.  
+# is commented in the file.
 
 # I worked on this challenge [by myself, with: Lienha Carleton].
 
@@ -11,9 +11,9 @@
 # Use the array as the input.
 # The return should be the median of the array
 # What are the steps needed to solve the problem?
-  # - Sort array
-  # - Check if array has even number of elements, then get the average of the two middle elements.
-  # - If array has odd number of elements, return the element in the middle.
+# - Sort array
+# - Check if array has even number of elements, then get the average of the two middle elements.
+# - If array has odd number of elements, return the element in the middle.
 
 # 2. Initial Solution
 
@@ -21,7 +21,7 @@
 #   array = array.sort!
 #   if array.length % 2 == 0
 #     return 0.5*(array[array.length/2] + array[array.length/2-1])
-#   else 
+#   else
 #     return array[(array.length-1)/2]
 #   end
 # end
@@ -32,7 +32,7 @@ def median(array)
   array = array.sort!
   if array.length % 2 == 0
     0.5*(array[array.length/2] + array[array.length/2-1])
-  else 
+  else
     array[(array.length-1)/2]
   end
 end

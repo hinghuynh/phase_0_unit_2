@@ -22,14 +22,14 @@
 # Refactored Solution
 
 class CreditCard
-	def initialize(num)
-		raise(ArgumentError, 'invald # of digits') unless num.to_s.length == 16
-		@num = num.to_s.chars.map(&:to_i)
-	end
+  def initialize(num)
+    raise(ArgumentError, 'invald # of digits') unless num.to_s.length == 16
+    @num = num.to_s.chars.map(&:to_i)
+  end
 
-	def check_card
-		@num.each_index { |i| @num[i] *= 2 if i.even? }.join.to_s.chars.map(&:to_i).reduce(:+) % 10 == 0
-	end
+  def check_card
+    @num.each_index { |i| @num[i] *= 2 if i.even? }.join.to_s.chars.map(&:to_i).reduce(:+) % 10 == 0
+  end
 end
 
 # DRIVER TESTS GO BELOW THIS LINE
@@ -39,4 +39,4 @@ end
 
 
 
-# Reflection 
+# Reflection

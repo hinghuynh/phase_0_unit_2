@@ -6,7 +6,7 @@
 
 
 # 1. Solution
-# Write your comments on what each thing is doing. 
+# Write your comments on what each thing is doing.
 # If you have difficulty, go into IRB and play with the methods.
 
 def north_korean_cipher(coded_message)
@@ -14,7 +14,7 @@ def north_korean_cipher(coded_message)
   decoded_sentence = []
   cipher = {"e" => "a",   # This is technically a shift of four letters...Can you think of a way to automate this? Is a hash
             "f" => "b",   # the best data structure for this problem? What are the pros and cons of hashes?
-            "g" => "c",   # automate this by creating 2 arrays and zip them together into a hash. Hash is like a dictionary 
+            "g" => "c",   # automate this by creating 2 arrays and zip them together into a hash. Hash is like a dictionary
             "h" => "d",   # which gives value to things you need to look up. But hash has less methods that you can use
             "i" => "e",   # unlike arrays.
             "j" => "f",
@@ -38,7 +38,7 @@ def north_korean_cipher(coded_message)
             "b" => "x",
             "c" => "y",
             "d" => "z"}
-            
+
   input.each do |x| # .each iterates over the coded_message, one letter at a time.
     found_match = false  # It is false because it is the starting point to decode? When it's set to true, the first test returns false.
     cipher.each_key do |y| # .each_key iterates over each key of the hash
@@ -55,35 +55,35 @@ def north_korean_cipher(coded_message)
         decoded_sentence << x
         found_match = true
         break
-      end 
+      end
     end
     if not found_match  # push everything else not matched into decoded_sentence
       decoded_sentence << x
     end
   end
   decoded_sentence = decoded_sentence.join("")
- 
+
   if decoded_sentence.match(/\d+/) # looking for any numbers
     decoded_sentence.gsub!(/\d+/) { |num| num.to_i / 100 } # divide found numbers by 100.
-  end  
-  return decoded_sentence # THE DECODED MESSAGE!!!  
+  end
+  return decoded_sentence # THE DECODED MESSAGE!!!
 end
 
 
 # Your Refactored Solution
 def north_korean_cipher(coded_message)
   cipher = Hash[*(("e".."z").to_a + ("a".."d").to_a).zip(("a".."z").to_a).flatten]
-    decoded_sentence = []
-    coded_message.downcase.each_char do |item|
-      if cipher.include?(item)
-          decoded_sentence << cipher[item]
-      elsif item == "@" || item == "#" || item == "$" || item == "%"|| item == "^" || item == "&"|| item =="*"
-          decoded_sentence << " "
-      else 
-          decoded_sentence << item
-      end
+  decoded_sentence = []
+  coded_message.downcase.each_char do |item|
+    if cipher.include?(item)
+      decoded_sentence << cipher[item]
+    elsif item == "@" || item == "#" || item == "$" || item == "%"|| item == "^" || item == "&"|| item =="*"
+      decoded_sentence << " "
+    else
+      decoded_sentence << item
     end
-    decoded_sentence = decoded_sentence.join
+  end
+  decoded_sentence = decoded_sentence.join
   if decoded_sentence.match(/\d+/)
     decoded_sentence.gsub!(/\d+/) { |num| num.to_i / 100 }
   end
@@ -100,10 +100,10 @@ p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw
 
 # Reflection
 # This was a very challenging exercise. My partner and I spent alot of time trying to figure out how
-# to refactor the hash.  We kept looking through the ruby documentations for methods we could use. 
-# and after a lot of trial and error, we figured out how to do it. Honestly this, code was beyond 
+# to refactor the hash.  We kept looking through the ruby documentations for methods we could use.
+# and after a lot of trial and error, we figured out how to do it. Honestly this, code was beyond
 # my level in terms of trying to replicate such code if I had to create the code on my own. It wasn't
 # until I refactor every single line of code possible, that I felt like I had a better grasp of
-# how the code worked. I enjoyed looking at how much progress my partner and I were able to make when reduce 
+# how the code worked. I enjoyed looking at how much progress my partner and I were able to make when reduce
 # the length of what looked like pretty efficient code.  From start to finish, this whole exercise seemed
 # pretty overwhelming, every step was quite tedious.
