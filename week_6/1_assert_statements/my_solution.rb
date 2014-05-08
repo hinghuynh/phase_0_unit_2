@@ -22,6 +22,7 @@
 # because statement is false.
 
 # 3. Copy your selected challenge here
+
 class CreditCard
   def initialize(card)
     raise ArgumentError.new("Invalid number of digits") unless card.to_s.length == 16
