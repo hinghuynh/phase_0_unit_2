@@ -37,18 +37,15 @@ class CreditCard
     @card.reduce(:+) % 10 == 0
   end
 end
-card = CreditCard.new(4408041234567893)
-p card.check_card == true
-another_card = CreditCard.new(4408041234567892)
-p another_card.check_card == false
-
-
 
 # 4. Convert your driver test code from that challenge into Assert Statements
+
 def assert
   raise "Assertion failed!" unless yield
 end
+card = CreditCard.new(4408041234567893)
 assert { card.check_card == true }
+another_card = CreditCard.new(4408041234567892)
 assert { another_card.check_card == true }
 
 # 5. Reflection
