@@ -41,10 +41,6 @@ boggle_board = BoggleBoard.new(dice_grid)
 
 # Couldn't think of anything to refactor for this exercise.
 
-
-
-
-
 # 1. DRIVER TESTS GO BELOW THIS LINE
 # create driver test code to retrieve a value at a coordinate here:
 # implement tests for each of the methods here:
