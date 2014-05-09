@@ -14,7 +14,7 @@
 
 #   def check_card
 #     @num.each_index { |i| @num[i] *= 2 if i.even? }
-#     @num = @num.join.to_s.chars.map(&:to_i).
+#     @num = @num.join.to_s.chars.map(&:to_i)
 #       @num.reduce(:+) % 10 == 0
 #   end
 # end
@@ -40,6 +40,6 @@ end
 card = CreditCard.new(4408041234567893)
 assert { card.check_card == true }
 another_card = CreditCard.new(4408041234567892)
-assert { another_card.check_card == true }
+assert { another_card.check_card == false }
 
 # Reflection
