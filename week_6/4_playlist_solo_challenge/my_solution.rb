@@ -62,9 +62,7 @@ end
 
 # Refactored Solution
 
-
-
-
+# Couldn't find anything to refactor
 
 # DRIVER TESTS GO BELOW THIS LINE
 one_by_one = Song.new("One by One", "Sirenia")
@@ -84,7 +82,14 @@ p my_playlist.includes?(lying_from_you) == true
 my_playlist.play_all
 my_playlist.display
 
-
-
-
 # Reflection
+# This exercise took me the longest out of all the exercises. Probably 
+# because I had to work on my own for this excerise. I didn't realize
+# that I could call a method from another class, I was stuck trying 
+# to figure out how to grab song title and artist while I was dealing
+# with the playlist class, When I figured out I could use a method
+# from the other class using inheritance, everything clicked.
+# I enjoyed figuring out how to get the driver code to work. Trying 
+# to figure out what to display when showing the playlist was a little
+# tedious. I got a better understanding of inheritance after this 
+# exercise.

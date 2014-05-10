@@ -53,6 +53,12 @@ assert { boggle_board.get_row(0) == ["b", "r", "a", "e"] }
 assert { boggle_board.get_row(1) == ["i", "o", "d", "t"] }
 assert { boggle_board.get_col(0) == ["b", "i", "e", "t"] }
 assert { boggle_board.get_col(1) == ["r", "o", "c", "a"] }
-p boggle_board.get_col(2)
 
 # 5. Reflection 
+# I didn't really have to do anything for exercise, besides use the assert 
+# for the driver code. So there wasn't anything i struggled with. The creation
+# of class and initialize the board was pretty straightfoward. To be honest,
+# I originally spelled initialize wrong and got this argument error that just
+# baffled me for a while, but it ended up being a good laugh.  Creating driver 
+# code it getting pretty tedious now, as this assert method is really repetitive.
+# Didn't really do much for this exercise, so there's not much to enjoy or learn.

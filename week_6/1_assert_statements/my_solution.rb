@@ -47,3 +47,11 @@ another_card = CreditCard.new(4563961122001999)
 assert { another_card.check_card == false }
 
 # 5. Reflection
+# This assigment was prety straight-forward. I didn't really face any
+# completing the exercise, however I feel like i don't fully understand
+# the term yield. I understand what the assert method does, but I just
+# don't understand what yield does. When i tried to print yield to see 
+# what value was there, it seemed to give me a value that was opposite 
+# of what the values that the check_card method was returning.  This was
+# a pretty boring assigment overall, as there wasn't any real programming.
+# in it. I found writing the driver test code a little tedious.

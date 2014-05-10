@@ -117,3 +117,10 @@ chopsticks.clean
 
 
 # 5. Reflection
+# This was first challenging exercise that I worked on this week. It took me
+# a while to understand why I couldn't eat with the fork. Originall there was 
+# no fork variable to use the eats method, but it took me a while to realize 
+# there was a new "fork" item added to the silver_drawer, however it was not
+# designated a variable.  I learned that you can call a method as a default
+# value for an argument.  I enjoyed figured out how to make the driver test
+# pass. Completing something challenging usually is pretty rewarding for me.

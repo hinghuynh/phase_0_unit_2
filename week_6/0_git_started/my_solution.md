@@ -48,3 +48,4 @@ You run git status to see if anything has been modified and/or staged since your
 - Commit locally
 
 ## Release 5: Reflection
+This task was really tedious, but I found it pretty useful. I've recently realize how readily used git and github are in the rails and ruby community. I only used the commands using the github application before this, so using commands in the terminal was something new for me. I don't feel like I've mastered git commands in the terminal but I am now faimilar with most of the commands listed here. I didn't really enjoy this challenge and found it tedious, but that usually means that it's something I need to spend more time on.
